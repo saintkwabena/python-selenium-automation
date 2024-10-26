@@ -16,6 +16,11 @@ def open_cart_page(context):
     context.driver.find_element(*VIEW_CART_AND_CHECKOUT_BTN).click()
 
 
+@then('Verify Cart Empty message shown')
+def verify_cart_empty(context):
+    context.app.cart_page.verify_cart_empty()
+
+
 @then('Verify cart has 1 item(s)')
 def verify_one_item_added(context):
     actual_result = context.driver.find_element(*ITEM_TEXT).text

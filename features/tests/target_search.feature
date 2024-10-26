@@ -5,6 +5,7 @@ Feature: Tests for Target Search functionality
     Given Open target main page
     When Search for a coffee
     Then Verify that correct search results shown for coffee
+    Then Verify product coffee in URL
 
 
 Scenario: User can search for a tea
@@ -39,3 +40,14 @@ Scenario Outline: User can search for product
     Given Open target main page
     When Search for AirPods (3rd Generation)
     Then Verify that every product has a name and an image
+
+
+  Scenario: Verify user can access Sign in
+    Given Open target main page
+    When Click sign In
+    And Click Sign In from right navigation
+    Then Verify Sign In form opened
+
+
+  Scenario: Add a product to cart
+    Given Open target main page

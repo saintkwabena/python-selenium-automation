@@ -35,6 +35,12 @@ def side_nav_click_add_to_cart(context):
 def verify_results(context, product):
     context.app.search_results_page.verify_results(product)
 
+@then('Verify product {product} in URL')
+def verify_results_url(context, product):
+    context.app.search_results_page.verify_results_url(product)
+
+
+
 
 @then('Verify that every product has a name and an image')
 def verify_products_name_img(context):

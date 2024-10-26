@@ -10,7 +10,7 @@ def open_main(context):
 
 @when('Click on cart icon')
 def click_cart(context):
-    context.driver.find_element(By.CSS_SELECTOR, "[data-test='@web/CartLink']").click()
+    context.app.header.click_cart()
 
 @when('Search for {item}')
 def search_product(context, item):
