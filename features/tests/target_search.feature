@@ -49,5 +49,18 @@ Scenario Outline: User can search for product
     Then Verify Sign In form opened
 
 
-  Scenario: Add a product to cart
-    Given Open target main page
+
+
+
+
+
+
+
+  Scenario: User can see favorites tooltip for search results
+    Given Open Target main page
+    When Search for tea
+    And Hover favorites icon
+    Then Favorites tooltip is shown
+
+
+
