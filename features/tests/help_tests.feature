@@ -1,7 +1,7 @@
 # Created by isaac at 10/30/2024
 Feature: Tests for Help pages
 
-
+@smoke
   Scenario: User can select Help topic Promotions & Coupons
     Given Open Help page for Returns
     Then Verify help Returns page opened
